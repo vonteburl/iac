@@ -1,0 +1,113 @@
+{
+ "properties": {
+  "displayName": "Audit Tags Essentials Virtual Machines",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "metadata": {
+   "category": "General",
+   "createdBy": "3c50de62-50f7-4374-806e-e3ccb3e56c12",
+   "createdOn": "2020-10-23T15:24:36.1698072Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "tagName1": {
+    "type": "String",
+    "metadata": {
+     "displayName": "First Tag Name",
+     "description": "Name of the tag, such as 'environment'"
+    }
+   },
+   "tagName2": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Second Tag Name",
+     "description": "Name of the tag, such as 'environment'"
+    }
+   },
+   "tagName3": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Third Tag Name",
+     "description": "Name of the tag, such as 'environment'"
+    }
+   },
+   "tagName4": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Forth Tag Name",
+     "description": "Name of the tag, such as 'environment'"
+    }
+   },
+   "tagName5": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Five Tag Name",
+     "description": "Name of the tag, such as 'environment'"
+    }
+   },
+   "tagName6": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Six Tag Name",
+     "description": "Name of the tag, such as 'environment'"
+    }
+   },
+   "tagName7": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Seven Tag Name",
+     "description": "Name of the tag, such as 'environment'"
+    }
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Compute/VirtualMachines"
+     },
+     {
+      "anyOf": [
+       {
+        "field": "[concat('tags[', parameters('tagName1'), ']')]",
+        "exists": "false"
+       },
+       {
+        "field": "[concat('tags[', parameters('tagName2'), ']')]",
+        "exists": "false"
+       },
+       {
+        "field": "[concat('tags[', parameters('tagName3'), ']')]",
+        "exists": "false"
+       },
+       {
+        "field": "[concat('tags[', parameters('tagName4'), ']')]",
+        "exists": "false"
+       },
+       {
+        "field": "[concat('tags[', parameters('tagName5'), ']')]",
+        "exists": "false"
+       },
+       {
+        "field": "[concat('tags[', parameters('tagName6'), ']')]",
+        "exists": "false"
+       },
+       {
+        "field": "[concat('tags[', parameters('tagName7'), ']')]",
+        "exists": "false"
+       }
+      ]
+     }
+    ]
+   },
+   "then": {
+    "effect": "audit"
+   }
+  }
+ },
+ "id": "/subscriptions/b4de8867-d6c8-43dc-9590-312661f8236e/providers/Microsoft.Authorization/policyDefinitions/0c9060d0-323e-468b-956e-d04f4c84e83b",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "0c9060d0-323e-468b-956e-d04f4c84e83b"
+}

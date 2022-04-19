@@ -1,0 +1,47 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "Audit Tags Essentials Virtual Machines",
+  "policyDefinitionId": "/subscriptions/b4de8867-d6c8-43dc-9590-312661f8236e/providers/Microsoft.Authorization/policyDefinitions/0c9060d0-323e-468b-956e-d04f4c84e83b",
+  "scope": "/subscriptions/b4de8867-d6c8-43dc-9590-312661f8236e",
+  "notScopes": [],
+  "parameters": {
+   "tagName1": {
+    "value": "Administração"
+   },
+   "tagName2": {
+    "value": "Ambiente"
+   },
+   "tagName3": {
+    "value": "Centro de Custo"
+   },
+   "tagName4": {
+    "value": "Criticidade"
+   },
+   "tagName5": {
+    "value": "Responsável"
+   },
+   "tagName6": {
+    "value": "Pacote de Serviços"
+   },
+   "tagName7": {
+    "value": "Regime de atendimento"
+   }
+  },
+  "metadata": {
+   "assignedBy": "igor.veiga@brasoftware.com.br",
+   "parameterScopes": {},
+   "createdBy": "3c50de62-50f7-4374-806e-e3ccb3e56c12",
+   "createdOn": "2020-10-29T02:57:02.8183267Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/b4de8867-d6c8-43dc-9590-312661f8236e/providers/Microsoft.Authorization/policyAssignments/ddd96a10ce0e4d86b1343119",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "ddd96a10ce0e4d86b1343119"
+}
